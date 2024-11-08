@@ -23,6 +23,7 @@ def fuelCost(distance, mpg, fuelCost):
     return distance/mpg*fuelCost
 def mostCommonChar(sentence):
     #the list below is sourced from the Concise Oxford Dictionary
+    # EDIT: when I did this challenge I was thinking it was asking to find the most commonly used letters in the enlgish alphabet in a string, not the most used letters in the same string
     lettersSortedByFrequency = ['e','a','r','i','o','t','n','s','l','c','u','d','p','m','h','g','b','f','y','w','k','v','x','z','j','q']
     for letter in lettersSortedByFrequency:
         if letter in sentence.lower():
@@ -38,7 +39,7 @@ print("Find the area of a hexagon using the length of one side: 3")
 print("How many sleeps til christmas 2024?: 4")
 print("Is the string a palindrome?: 5")
 print("How much itll cost you to go a distance: 6")
-print("The most common character in a string: 7\n")
+print("The most common character in a string *(see line 26): 7\n")
 
 choice = int(input("which one would you like to test: "))
 
@@ -57,7 +58,7 @@ elif choice==5:
 elif choice==6:
     print(f"It will cost you ${fuelCost(int(input("How far are you going?: ")),int(input("What's you're miles per gallon?: ")),int(input("How much does fuel cost?: ")))}")
     #i dont drive a car, so i don't know if this is correct :D
-elif choice==7:
+elif choice==7: #see line 26
     result = mostCommonChar(input("Let me find the most common character in a string you write: "))
     print(f"The letter {result[0]} is the most common letter in your string. It is ranked {result[1]+1} in the most common letters")
 elif choice==8:
