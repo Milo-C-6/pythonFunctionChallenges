@@ -29,7 +29,7 @@ def mostCommonChar(sentence):
         if letter in sentence.lower():
             return [letter,lettersSortedByFrequency.index(letter)]
 def isPrime(num):
-    return math.sqrt(num)
+    return math.sqrt(num) #was starting on this but never got it done
 
 print("Here the challenges I was able to complete in one class period:")#I woulda put this all in one print statement with \n new lines but thats too hard to read the code with
 print("Kilometers to miles: 0")
@@ -56,10 +56,14 @@ elif choice==4:
 elif choice==5:
     print(isPalindrome(input("Put in a word to test if it's a palindrome: ")))
 elif choice==6:
-    print(f"It will cost you ${fuelCost(int(input("How far are you going?: ")),int(input("What's you're miles per gallon?: ")),int(input("How much does fuel cost?: ")))}")
+    farYourGoing = int(input("How far are you going?: "))
+    mPG = int(input("What's your mile per gallon?: "))
+    fuelPrice = int(input("How much does fuel cost?: "))
+    print(f"It will cost you ${fuelCost(farYourGoing,mPG,fuelPrice)}")
     #i dont drive a car, so i don't know if this is correct :D
 elif choice==7: #see line 26
     result = mostCommonChar(input("Let me find the most common character in a string you write: "))
     print(f"The letter {result[0]} is the most common letter in your string. It is ranked {result[1]+1} in the most common letters")
 elif choice==8:
+    print("didn't get this one done, ignore it pls")
     print(isPrime(int(input("Enter a number: "))))
